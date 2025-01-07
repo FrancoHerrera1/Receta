@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Cuerpo-Home {
+    font-family: "Poppins", serif;
+    background-color: #F2F8F4;    
+}
+
+h1 {
+    width: 400px;
+    height: 100px;
+    padding: 50px;
+}
+
+.Logo {
+    width: 100px;
+    height: 100px;
+    flex-wrap: wrap;
+    margin-left: 17%;
+    margin-top: -6%;   
+}
+
+.NavBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: -65px;
+}
+
+.Lista {
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+
+.Lista a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.Hero {
+    background-size: cover;
+    height: 500px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.Hero {
+    display: flex;
+    width: 60%;
+    font-size: 25px;
+    padding: 100px;
+    flex-wrap: wrap;
+}
+
+.Hero button {
+    padding: 0px;
+    margin-left: 30%;
+    margin-top: 3%;
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    background-color: #FCC539;
+    color: white;
+}
+
+.Hero img {
+    display: flex;
+    width: 60%;
+    height: 350px;
+    margin-left: 110%;
+    margin-top: -38%;
+    border-radius: 40px;
+}
+
+

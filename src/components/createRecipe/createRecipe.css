@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Cuerpo-RecipeBu {
+    font-family: "Poppins", serif;
+    background-color: #F2F8F4; 
+    padding-left: 80px;   
+}
+
+.CreaTu {
+    margin-bottom: 50px;
+}
+
+.IngreBas {
+    margin-top: 50px;
+}
+
+
+.Cuerpo-RecipeBu button {
+    width: 200px;
+    height: 60px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    background-color: #FCC539;
+    color: white;
+}
+
+.ingredients-container button {
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  ul {
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  
