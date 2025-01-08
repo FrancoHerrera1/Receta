@@ -2,11 +2,11 @@ import { useState } from "react";
 import "./createRecipe.css";
 
 const ingredientes = [
-  { id: 1, nombre: "Harina", cantidad: "" },
-  { id: 2, nombre: "Azúcar", cantidad: "" },
-  { id: 3, nombre: "Mantequilla", cantidad: "" },
+  { id: 1, nombre: "Carne", cantidad: "" },
+  { id: 2, nombre: "Sal", cantidad: "" },
+  { id: 3, nombre: "Manteca", cantidad: "" },
   { id: 4, nombre: "Huevos", cantidad: "" },
-  { id: 5, nombre: "Extracto de Vainilla", cantidad: "" },
+  { id: 5, nombre: "Leche", cantidad: "" },
 ];
 
 const CreateRecipe = () => {
@@ -41,6 +41,7 @@ const CreateRecipe = () => {
       {name && (
         <div className="card">
           <h4>Receta: {name}</h4>
+          <p>Ingredientes Seleccionados:</p>
           {}
         </div>
       )}

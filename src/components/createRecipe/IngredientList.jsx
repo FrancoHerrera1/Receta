@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export const IngredientList = () => {
   return (
-    <div></div>
+    <div>
+      
+    </div>
   )
 }
 
