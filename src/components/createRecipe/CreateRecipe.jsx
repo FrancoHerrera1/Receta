@@ -2,11 +2,16 @@ import { useState } from "react";
 import "./createRecipe.css";
 
 const ingredientes = [
-  { id: 1, nombre: "Carne", cantidad: "" },
-  { id: 2, nombre: "Sal", cantidad: "" },
-  { id: 3, nombre: "Manteca", cantidad: "" },
-  { id: 4, nombre: "Huevos", cantidad: "" },
-  { id: 5, nombre: "Leche", cantidad: "" },
+  { id: 1, nombre: "Aceites", cantidad: "" },
+  { id: 2, nombre: "Huevos", cantidad: "" },
+  { id: 3, nombre: "Arroz", cantidad: "" },
+  { id: 4, nombre: "Legumbres", cantidad: "" },
+  { id: 5, nombre: "Verduras", cantidad: "" },
+  { id: 6, nombre: "Frutas", cantidad: "" },
+  { id: 7, nombre: "Carnes", cantidad: "" },
+  { id: 8, nombre: "Especias", cantidad: "" },
+  { id: 9, nombre: "Sal-Pimienta", cantidad: "" },
+  { id: 10, nombre: "Frutos Secos-Semillas", cantidad: "" },
 ];
 
 const CreateRecipe = () => {
@@ -55,7 +60,7 @@ const CreateRecipe = () => {
                 <label htmlFor={ingrediente?.nombre}>
                   {ingrediente?.nombre}
                 </label>
-                <input type="text"></input>
+                <input type="text" placeholder="Tipo/Cantidad"></input>
                 <button onClick={() => {}}>Agregar</button>
               </li>
             );

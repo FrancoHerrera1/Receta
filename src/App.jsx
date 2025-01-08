@@ -23,7 +23,7 @@ const App = () => {
             <li>
               <a href="#">Mis Recetas</a>
             </li>
-            <li>
+            <li onClick={() => setRenderPage("IngredientList")}>
               <a href="#">Ingredientes</a>
             </li>
           </ul>

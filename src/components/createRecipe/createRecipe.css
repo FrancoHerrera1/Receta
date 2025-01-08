@@ -40,6 +40,31 @@
 
 .ingredient-list {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px;
+  list-style: none;
+}
+
+.ingredient-list li {
+  background-color: aqua;
+  width: 50%;
+}
+
+.ingredient-list input {
+  width: 50%;
+  height: 40px;
+  display: flex;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/*
+.ingredient-list {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: .5rem;
@@ -57,6 +82,7 @@
   align-items: center;
   width: 60%;
 }
+
 
 label {
     display: block;
@@ -86,8 +112,7 @@ label {
     justify-content: space-between;
     align-items: center;
   }
-
-  
+*/
 .card {
   width: 500px;
   height: 300px;
