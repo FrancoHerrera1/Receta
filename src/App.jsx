@@ -1,14 +1,32 @@
 import { useState } from "react";
-import Home from "./components/home/Home";
 import CreateRecipe from "./components/createRecipe/CreateRecipe";
-import RecipeBuilder from "./components/createRecipe/RecipeBuilder";
-import IngredientList from "./components/createRecipe/IngredientList";
 import Footer from "./components/footer/Footer";
+import Home from "./components/home/Home";
+import Ingredients from "./components/ingredients/Ingredients";
 import "./App.css";
 
 import logo from "./components/imagenes/PolloLogo.png";
 
+const ingredientsList = [
+  { id: 1, nombre: "Aceites", cantidad: "", puntajeNutricial: 0 },
+  { id: 2, nombre: "Huevos", cantidad: "", puntajeNutricial: 0 },
+  { id: 3, nombre: "Arroz", cantidad: "", puntajeNutricial: 0 },
+  { id: 4, nombre: "Legumbres", cantidad: "", puntajeNutricial: 0 },
+  { id: 5, nombre: "Verduras", cantidad: "", puntajeNutricial: 0 },
+  { id: 6, nombre: "Frutas", cantidad: "", puntajeNutricial: 0 },
+  { id: 7, nombre: "Carnes", cantidad: "", puntajeNutricial: 0 },
+  { id: 8, nombre: "Especias", cantidad: "", puntajeNutricial: 0 },
+  { id: 9, nombre: "Sal-Pimienta", cantidad: "", puntajeNutricial: 0 },
+  {
+    id: 10,
+    nombre: "Frutos Secos-Semillas",
+    cantidad: "",
+    puntajeNutricial: 0,
+  },
+];
+
 const App = () => {
+  console.log('app', { ingredientsList})
   const [renderPage, setRenderPage] = useState("home");
   return (
     <div className="content">
@@ -25,7 +43,7 @@ const App = () => {
                 Mis Recetas
               </a>
             </li>
-            <li onClick={() => setRenderPage("IngredientList")}>
+            <li onClick={() => setRenderPage("ingredients")}>
               <a href="#">Ingredientes</a>
             </li>
           </ul>
@@ -34,9 +52,10 @@ const App = () => {
       {renderPage === "home" && (
         <Home navegateToCreateRecipe={() => setRenderPage("create-recipe")} />
       )}
-      {renderPage === "create-recipe" && <CreateRecipe />}
-      {renderPage === "recipe-builder" && <RecipeBuilder />}
-      {renderPage === "ingredient-list" && <IngredientList />}
+      {renderPage === "create-recipe" && (
+        <CreateRecipe ingredientsList={ingredientsList} />
+      )}
+      {renderPage === "ingredients" && <Ingredients ingredientsList={ingredientsList} />}
       <Footer />
     </div>
   );

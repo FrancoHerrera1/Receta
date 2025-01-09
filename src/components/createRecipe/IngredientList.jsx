@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ingredientList.css";
 
-export const IngredientList = ({ ingredientes, addItems }) => {
+export const IngredientList = ({ ingredientsList, addItems }) => {
   const [nuevaCantidad, setNuevaCantidad] = useState({});
 
   const handleInputChange = (id, value) => {
@@ -17,7 +17,7 @@ export const IngredientList = ({ ingredientes, addItems }) => {
     <div className="ingredients-container">
       <h2 className="ingredients-basico">Ingredientes Básicos</h2>
       <ul className="ingredients-list">
-        {ingredientes.map((ingrediente) => {
+        {ingredientsList?.map((ingrediente) => {
           return (
             <li key={ingrediente?.id}>
               <label htmlFor={ingrediente?.nombre}>{ingrediente?.nombre}</label>
