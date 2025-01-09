@@ -4,7 +4,7 @@ import CreateRecipe from "./components/createRecipe/CreateRecipe";
 import RecipeBuilder from "./components/createRecipe/RecipeBuilder";
 import IngredientList from "./components/createRecipe/IngredientList";
 import Footer from "./components/footer/Footer";
-import './App.css'
+import "./App.css";
 
 import logo from "./components/imagenes/PolloLogo.png";
 
@@ -21,7 +21,9 @@ const App = () => {
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="#">Mis Recetas</a>
+              <a href="#" onClick={() => setRenderPage("create-recipe")}>
+                Mis Recetas
+              </a>
             </li>
             <li onClick={() => setRenderPage("IngredientList")}>
               <a href="#">Ingredientes</a>

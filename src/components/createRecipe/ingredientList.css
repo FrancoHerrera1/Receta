@@ -1,0 +1,32 @@
+.ingredients-container button {
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+
+.ingredients-basico {
+  margin-top: 50px;
+}
+
+.ingredients-list {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  overflow-y: scroll;
+  padding: 50px;
+  list-style: none;
+  height: 560px;
+}
+
+.ingredients-list li {
+  background-color: aqua;
+  width: 100%;
+}
+
+.ingredients-list input {
+  width: 50%;
+  height: 40px;
+  display: flex;
+}

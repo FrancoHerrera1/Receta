@@ -6,18 +6,16 @@
 .Cuerpo-RecipeBu {
     font-family: "Poppins", serif;
     background-color: #F2F8F4; 
-    padding-left: 80px;   
+    padding: 0 80px;   
     height: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .CreaTu {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
-}
-
-.IngreBas {
-    margin-top: 50px;
 }
 
 .Cuerpo-RecipeBu button {
@@ -29,32 +27,6 @@
     background-color: #FCC539;
     color: white;
     cursor: pointer;
-}
-
-.ingredients-container button {
-    width: 100px;
-    height: 50px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.ingredient-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 50px;
-  list-style: none;
-}
-
-.ingredient-list li {
-  background-color: aqua;
-  width: 50%;
-}
-
-.ingredient-list input {
-  width: 50%;
-  height: 40px;
-  display: flex;
 }
 
 label {

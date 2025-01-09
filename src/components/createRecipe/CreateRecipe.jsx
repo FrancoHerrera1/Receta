@@ -1,71 +1,68 @@
 import { useState } from "react";
+import IngredientList from "./IngredientList";
 import "./createRecipe.css";
 
 const ingredientes = [
-  { id: 1, nombre: "Aceites", cantidad: "" },
-  { id: 2, nombre: "Huevos", cantidad: "" },
-  { id: 3, nombre: "Arroz", cantidad: "" },
-  { id: 4, nombre: "Legumbres", cantidad: "" },
-  { id: 5, nombre: "Verduras", cantidad: "" },
-  { id: 6, nombre: "Frutas", cantidad: "" },
-  { id: 7, nombre: "Carnes", cantidad: "" },
-  { id: 8, nombre: "Especias", cantidad: "" },
-  { id: 9, nombre: "Sal-Pimienta", cantidad: "" },
-  { id: 10, nombre: "Frutos Secos-Semillas", cantidad: "" },
+  { id: 1, nombre: "Aceites", cantidad: "", puntajeNutricial: 0 },
+  { id: 2, nombre: "Huevos", cantidad: "", puntajeNutricial: 0 },
+  { id: 3, nombre: "Arroz", cantidad: "", puntajeNutricial: 0 },
+  { id: 4, nombre: "Legumbres", cantidad: "", puntajeNutricial: 0 },
+  { id: 5, nombre: "Verduras", cantidad: "", puntajeNutricial: 0 },
+  { id: 6, nombre: "Frutas", cantidad: "", puntajeNutricial: 0 },
+  { id: 7, nombre: "Carnes", cantidad: "", puntajeNutricial: 0 },
+  { id: 8, nombre: "Especias", cantidad: "", puntajeNutricial: 0 },
+  { id: 9, nombre: "Sal-Pimienta", cantidad: "", puntajeNutricial: 0 },
+  {id: 10, nombre: "Frutos Secos-Semillas", cantidad: "", puntajeNutricial: 0,},
 ];
 
 const CreateRecipe = () => {
-  const [name, setName] = useState();
-  // const [recipe, setRecipe] = useState();
+  const [recipeName, setRecipeName] = useState();
+  const [recipeItems, setRecipeItems] = useState([]);
+
+  const addItems = (ingrediente) => {
+    console.log("agrego items:", ingrediente);
+    setRecipeItems( (prev) => [...prev, ingrediente ] );
+  };
 
   return (
     <div className="Cuerpo-RecipeBu">
-      <h2 className="CreaTu">¡Crea tu Receta!</h2>
+      <div>
+        <h2 className="CreaTu">¡Crea tu Receta!</h2>
 
-      <form id="recipeForm">
-        <label htmlFor="recipeName">Nombre de la receta:</label>
-        <input
-          type="text"
-          id="recipeName"
-          name="recipeName"
-          placeholder="Nombre..."
-          onChange={(e) => setName(e.target.value)}
-        />
 
-        <label htmlFor="ingredientsList"></label>
-        <ul id="ingredientsList"></ul>
+        <div className="card">
+          <input
+            type="text"
+            id="recipeName"
+            name="recipeName"
+            placeholder="Nombra tu receta..."
+            onChange={(e) => setRecipeName(e.target.value)}
+          />
+          <p>Ingredientes Seleccionados:</p>
+
+          <ul>
+            {recipeItems?.map((item) => {
+              return (
+                <li key={item?.id}>
+                  {item.nombre}{' '}
+                  {item.cantidad}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
         <button
-          type="submit"
           className="save-button btn btn-outline-success"
-          onClick={() => null}
+          onClick={(event) => {
+            event.preventDefault();
+          }}
         >
           Guardar Receta
         </button>
-      </form>
-
-      {name && (
-        <div className="card">
-          <h4>Receta: {name}</h4>
-          <p>Ingredientes Seleccionados:</p>
-          {}
-        </div>
-      )}
-
-      <div className="ingredients-container">
-        <h2 className="IngreBas">Ingredientes Básicos</h2>
-        <ul className="ingredient-list">
-          {ingredientes.map((ingrediente) => {
-            return (
-              <li key={ingrediente?.id}>
-                <label htmlFor={ingrediente?.nombre}>
-                  {ingrediente?.nombre}
-                </label>
-                <input type="text" placeholder="Tipo/Cantidad"></input>
-                <button onClick={() => {}}>Agregar</button>
-              </li>
-            );
-          })}
-        </ul>
+      </div>
+      <div>
+        <IngredientList ingredientes={ingredientes} addItems={addItems} />
       </div>
     </div>
   );
