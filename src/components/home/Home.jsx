@@ -3,7 +3,7 @@ import ImgHero from "../imagenes/Receta-Sarten.jpg";
 
 const Home = ({ navegateToCreateRecipe }) => {
   return (
-    <div className="Cuerpo-Home">
+    <div className="cuerpo-home">
       <div className="Hero">
         <p>
           Bienvenido al Horno.com! Aquí podras crear todas las recetas que tú
@@ -18,8 +18,8 @@ const Home = ({ navegateToCreateRecipe }) => {
         >
           Crear Receta
         </button>
-        <img src={ImgHero} alt="Imagen Hero" />
       </div>
+      <img src={ImgHero} alt="Imagen Hero" />
     </div>
   );
 };

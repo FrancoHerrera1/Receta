@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IngredientList from "./IngredientList";
 import "./createRecipe.css";
+import RecipeSummary from "./RecipeSummary";
 
 const CreateRecipe = ({ ingredientsList }) => {
-  const [recipe, setRecipe] = useState({});
+  const [recipe, setRecipe] = useState(null);
   const [recipeName, setRecipeName] = useState();
   const [recipeItems, setRecipeItems] = useState([]);
+  const [recipeScore, setRecipeScore] = useState(0);
 
   const addItems = (ingrediente) => {
     console.log("agrego items:", ingrediente);
@@ -16,6 +18,7 @@ const CreateRecipe = ({ ingredientsList }) => {
     setRecipe({
       name: recipeName,
       ingredients: recipeItems,
+      score: recipeScore,
     });
     setRecipeName("");
     setRecipeItems([]);
@@ -26,44 +29,34 @@ const CreateRecipe = ({ ingredientsList }) => {
     setRecipeItems([]);
   };
 
+  useEffect(() => {
+    let puntaje = 0;
+    recipeItems.forEach((item) => {
+      puntaje += item.puntajeNutricial;
+    });
+    setRecipeScore(puntaje);
+  }, [recipeItems]);
+
+  useEffect(() => {
+    if (!recipe) return;
+    const existingRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
+    existingRecipes.push(recipe);
+    localStorage.setItem("recipes", JSON.stringify(existingRecipes));
+  }, [recipe]);
+
   return (
     <div className="Cuerpo-RecipeBu">
       <div>
         <h2 className="CreaTu">¡Crea tu Receta!</h2>
 
-        <div className="card">
-          <input
-            type="text"
-            id="recipeName"
-            name="recipeName"
-            value={recipeName}
-            placeholder="Nombra tu receta..."
-            onChange={(e) => setRecipeName(e.target.value)}
-          />
-          <p>Ingredientes Seleccionados:</p>
+        <RecipeSummary
+          recipeName={recipeName}
+          recipeItems={recipeItems}
+          recipeScore={recipeScore}
+          setRecipeItems={setRecipeItems}
+          setRecipeName={setRecipeName}
+        />
 
-          <ul>
-            {recipeItems?.map((item) => {
-              return (
-                <div key={item?.id}>
-                  <li>
-                    {item.nombre} {item.cantidad}
-                  </li>
-
-                  <button
-                    onClick={() =>
-                      setRecipeItems((prev) =>
-                        prev.filter((recipeItem) => recipeItem?.id !== item?.id)
-                      )
-                    }
-                  >
-                    Borrar
-                  </button>
-                </div>
-              );
-            })}
-          </ul>
-        </div>
         <div>
           <button
             className="save-button btn btn-outline-success"
