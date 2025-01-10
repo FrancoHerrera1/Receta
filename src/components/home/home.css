@@ -8,7 +8,7 @@
     background-color: #F2F8F4;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
 }
 
@@ -22,8 +22,8 @@
 
 
 .Logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .NavBar {
@@ -58,10 +58,12 @@
     height: 500px;
     flex-wrap: wrap;
     display: flex;
-    width: 60%;
+    width: 45%;
+    padding-top: 50px;
     font-size: 25px;
     padding: 100px;
     justify-content: center;
+    text-align: start;
 }
 
 .Hero button {
@@ -74,6 +76,10 @@
     background-color: #FCC539;
     color: white;
     cursor: pointer;
-    margin: 10px
+    margin: 30px;
+}
+
+.Hero button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 

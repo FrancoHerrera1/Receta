@@ -20,8 +20,8 @@ export const IngredientList = ({ ingredientsList, addItems }) => {
         {ingredientsList?.map((ingrediente) => {
           return (
             <li key={ingrediente?.id}>
-              <label htmlFor={ingrediente?.nombre}>{ingrediente?.nombre}</label>
-              <div style={{ display: "flex", flexDirection: "row" }}>
+              <label className="label-list" htmlFor={ingrediente?.nombre}>{ingrediente?.nombre}</label>
+              <div className="ingredient-list-row" style={{ display: "flex", flexDirection: "row" }}>
                 <input
                   type="text"
                   placeholder="Cantidad"
@@ -30,11 +30,10 @@ export const IngredientList = ({ ingredientsList, addItems }) => {
                     handleInputChange(ingrediente.id, e.target.value)
                   }
                 ></input>
-                <p>unidad</p>
-              </div>
-              <button onClick={() => handleAddItem(ingrediente)}>
-                Agregar
+                <button className="add-button" onClick={() => handleAddItem(ingrediente)}>
+                <i class="material-icons">add_circle</i>
               </button>
+              </div>
             </li>
           );
         })}

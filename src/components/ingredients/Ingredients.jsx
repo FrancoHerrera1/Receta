@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ingredients.css"
 
 const Ingredients = ({ ingredientsList, setIngredientsList }) => {
   const [newIngredient, setNewIngredient] = useState({

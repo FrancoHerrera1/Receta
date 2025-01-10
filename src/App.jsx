@@ -9,11 +9,11 @@ import logo from "./components/imagenes/PolloLogo.png";
 import RecipeHistory from "./components/recipeHistory/RecipeHistory";
 
 const baseIngredientsList = [
-  { id: 1, nombre: "Aceites", cantidad: "", puntajeNutricial: 50 },
-  { id: 2, nombre: "Huevos", cantidad: "", puntajeNutricial: 75 },
-  { id: 3, nombre: "Arroz", cantidad: "", puntajeNutricial: 63 },
-  { id: 4, nombre: "Legumbres", cantidad: "", puntajeNutricial: 28 },
-  { id: 5, nombre: "Verduras", cantidad: "", puntajeNutricial: 47 },
+  { id: 1, nombre: "Aceites", cantidad: "", puntajeNutricial: 135 },
+  { id: 2, nombre: "Huevos", cantidad: "", puntajeNutricial: 84 },
+  { id: 3, nombre: "Arroz", cantidad: "", puntajeNutricial: 351 },
+  { id: 4, nombre: "Legumbres", cantidad: "", puntajeNutricial: 23 },
+  { id: 5, nombre: "Verduras", cantidad: "", puntajeNutricial: 55 },
 ];
 
 const App = () => {
@@ -28,8 +28,8 @@ const App = () => {
           alignItems: "center",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "2rem", padding: '0 3rem' }}>
-          <h1>Al Horno.com</h1>{" "}
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", padding: '0 3rem' }}>
+          <h2>AlHorno.com</h2>{" "}
           <img className="Logo" src={logo} alt="Logo de Al Horno.com" />
         </div>
         <div className="NavBar">

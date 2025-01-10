@@ -13,7 +13,6 @@
 .ingredients-list {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
   overflow-y: scroll;
   padding: 50px;
   list-style: none;
@@ -21,12 +20,33 @@
 }
 
 .ingredients-list li {
-  background-color: aqua;
   width: 100%;
 }
 
 .ingredients-list input {
-  width: 50%;
+  width: 250px;
   height: 40px;
   display: flex;
+}
+
+.ingredient-list-row {
+  align-items: center;
+  gap: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.label-list {
+  margin-top: 8px;
+}
+
+.add-button {
+  background-color: #007c1c !important;
+  width: 60px !important;
+  height: 50px !important;
+  border-radius: 15px !important;
+}
+
+.add-button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
