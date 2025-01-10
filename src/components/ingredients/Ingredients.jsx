@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ingredients.css"
+import ImgIngredients1 from "../imagenes/Ingredientes2.jpg"
+import ImgChef from "../imagenes/Chef.jpg"
+
 
 const Ingredients = ({ ingredientsList, setIngredientsList }) => {
   const [newIngredient, setNewIngredient] = useState({
@@ -27,19 +30,26 @@ const Ingredients = ({ ingredientsList, setIngredientsList }) => {
       id: newId,
       ...newIngredient,
     };
+    
+    //Funcion para guardar ingredientes custom en localStorage
+    const existingIngredients = JSON.parse(localStorage.getItem("ingredients")) || [];
+    existingIngredients.push(ingredientToAdd);
+    localStorage.setItem("ingredients", JSON.stringify(existingIngredients));
 
     setIngredientsList((prev) => [...prev, ingredientToAdd]);
     setNewIngredient({ nombre: "", puntajeNutricial: 0 });
   };
 
   return (
-    <div>
-      <div>
+    <div className="ingredients-page-container">
+      <div className="ingredients-page-card">
         <div>
-          <input
+          <h2>!Agrega tus Ingredientes!</h2>
+          <div style={{marginTop: "10px"}}>
+          <input style={{width: "250px", marginRight: "15px"}}
             type="text"
             name="nombre"
-            placeholder="Ingrese ingrediente"
+            placeholder="Ingrese Ingrediente"
             value={newIngredient.nombre}
             onChange={handleInputChange}
           />
@@ -50,17 +60,20 @@ const Ingredients = ({ ingredientsList, setIngredientsList }) => {
             value={newIngredient.puntajeNutricial}
             onChange={handleInputChange}
           />
+          </div>
         </div>
         <button onClick={addIngredient}>Agregar</button>
-      </div>
-      <div>
-        <ul>
+        <ul className="ingredients-page-list">
           {ingredientsList?.map((item) => (
             <li key={item.id}>
               {item.nombre} - {item.puntajeNutricial}
             </li>
           ))}
         </ul>
+      </div>
+      <div style={{display:"flex", flexDirection:"column", width: "20%"}}>
+        <div><img src={ImgIngredients1} alt="Img Ingredients1" /></div>
+        <div style={{display:"flex", justifyContent:"flex-end", marginTop:"30px", marginBottom:"30px"}}><img src={ImgChef} alt="Img Chef" /></div>   
       </div>
     </div>
   );

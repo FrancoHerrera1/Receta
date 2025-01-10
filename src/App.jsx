@@ -19,6 +19,7 @@ const baseIngredientsList = [
 const App = () => {
   const [renderPage, setRenderPage] = useState("home");
   const [ingredientsList, setIngredientsList] = useState(baseIngredientsList);
+
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <nav
@@ -51,7 +52,7 @@ const App = () => {
       </nav>
       <div className="content">
         {renderPage === "home" && (
-          <Home navegateToCreateRecipe={() => setRenderPage("create-recipe")} />
+          <Home navegateToCreateRecipe={() => setRenderPage("create-recipe")} baseIngredientsList={ingredientsList}/>
         )}
         {renderPage === "create-recipe" && (
           <CreateRecipe ingredientsList={ingredientsList} />

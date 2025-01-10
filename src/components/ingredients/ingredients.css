@@ -1,0 +1,53 @@
+.ingredients-page-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.ingredients-page-card {
+    border: solid;
+    padding: 50px;
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-color: #007c1c;
+}
+
+.ingredients-page-card input {
+    height: 40px;
+    border-radius: 5px;
+    font-family: "Poppins", serif;
+    border: 1px solid #ccc;
+}
+
+.ingredients-page-card button{
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    background-color: #FCC539;
+    color: white;
+    cursor: pointer;
+}
+
+.ingredients-page-card button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.ingredients-page-list {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.ingredients-page-container img {
+    width: 450px;
+    height: 300px;
+    border-radius: 50px;
+    border: solid #FCC539;
+    border-width: 1px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

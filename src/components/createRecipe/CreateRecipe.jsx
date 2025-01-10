@@ -3,7 +3,7 @@ import IngredientList from "./IngredientList";
 import "./createRecipe.css";
 import RecipeSummary from "./RecipeSummary";
 
-const CreateRecipe = ({ ingredientsList }) => {
+const CreateRecipe = () => {
   const [recipe, setRecipe] = useState(null);
   const [recipeName, setRecipeName] = useState();
   const [recipeItems, setRecipeItems] = useState([]);
@@ -28,6 +28,8 @@ const CreateRecipe = ({ ingredientsList }) => {
     setRecipeName("");
     setRecipeItems([]);
   };
+
+  const ingredientsList = JSON.parse(localStorage.getItem("ingredients")) || [];
 
   useEffect(() => {
     let puntaje = 0;

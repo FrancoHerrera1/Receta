@@ -1,7 +1,13 @@
 import "./home.css";
 import ImgHero from "../imagenes/Receta-Sarten.jpg";
+import { useEffect } from "react";
 
-const Home = ({ navegateToCreateRecipe }) => {
+const Home = ({ navegateToCreateRecipe, baseIngredientsList }) => {
+
+  useEffect(() => {
+    localStorage.setItem("ingredients", JSON.stringify(baseIngredientsList));
+  }, []);
+
   return (
     <div className="cuerpo-home">
       <div className="Hero">
