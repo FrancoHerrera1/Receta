@@ -44,7 +44,7 @@ const Ingredients = ({ ingredientsList, setIngredientsList }) => {
     <div className="ingredients-page-container">
       <div className="ingredients-page-card">
         <div>
-          <h2>!Agrega tus Ingredientes!</h2>
+          <h2>¡Agrega tus Ingredientes!</h2>
           <div style={{marginTop: "10px"}}>
           <input style={{width: "250px", marginRight: "15px"}}
             type="text"

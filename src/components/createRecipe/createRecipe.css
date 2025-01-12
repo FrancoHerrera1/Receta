@@ -34,59 +34,6 @@ label {
   margin-bottom: 8px;
 }
 
-/*
-.ingredient-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: .5rem;
-}
-
-.ingredient-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem
-}
-
-.ingredient-list li input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-}
-
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  ul {
-    list-style: none;
-    margin-top: 10px;
-    padding-left: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-*/
-
-
 .card input {
   height: 40px;
   border-radius: 5px;

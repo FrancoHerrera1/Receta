@@ -12,7 +12,7 @@ const Home = ({ navegateToCreateRecipe, baseIngredientsList }) => {
     <div className="cuerpo-home">
       <div className="Hero">
         <p>
-          Bienvenido al Horno.com! Aquí podras crear todas las recetas que tú
+          Bienvenido AlHorno.com! Aquí podras crear todas las recetas que tú
           quieras en pocos pasos, de una forma simple y rápida... Disfruta de
           una variedad de platos deliciosos y elaborados con todos los
           ingredientes que desees para crear una experiencia gastronómica unica!
