@@ -9,11 +9,19 @@
     padding: 0 80px;   
     height: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
 }
 
+.recipe-body-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
 .CreaTu {
-  margin-bottom: 30px;
   display: flex;
 }
 
@@ -37,6 +45,7 @@ label {
 .card input {
   height: 40px;
   border-radius: 5px;
+  padding: 10px;
   font-family: "Poppins", serif;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -48,6 +57,7 @@ label {
 
 li input {
 border-radius: 5px;
+padding: 10px;
 font-family: "Poppins", serif;
 border: 1px solid #ccc;  
 }

@@ -42,6 +42,11 @@
   margin-top: 8px;
 }
 
+.material-icons {
+  display: flex;
+  flex-direction: column;
+}
+
 .add-button {
   background-color: #007c1c !important;
   width: 60px !important;

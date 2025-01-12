@@ -48,7 +48,7 @@ const CreateRecipe = () => {
 
   return (
     <div className="Cuerpo-RecipeBu">
-      <div style={{marginTop: "50px"}}>
+      <div className="recipe-body-card">
         <h2 className="CreaTu">¡Crea tu Receta!</h2>
 
         <RecipeSummary
@@ -59,7 +59,7 @@ const CreateRecipe = () => {
           setRecipeName={setRecipeName}
         />
 
-        <div style={{display: "flex", justifyContent: "space-evenly"}}>
+        <div style={{display: "flex", justifyContent: "space-evenly", gap:"2rem"}}>
           <button
             className="shadow-button"
             onClick={handleDeleteRecipe}
