@@ -1,29 +1,29 @@
+import "./recipeCards.css"
+
 const RecipeCard = ({ recipe, onDelete }) => {
   return (
-    <div
-      style={{
-        border: "1px solid black",
-        padding: "2rem",
-        height: "300px",
-        overflowY: "scroll",
-      }}
-    >
-      <div>
-        <h4>{recipe?.name}</h4> - Puntaje Nutricional: {recipe?.score}
+    <div className="card">
+      <div style={{display:"flex", justifyContent:"center"}}>
+        <h4>{recipe?.name}</h4>
       </div>
+      <div style={{padding:"10px"}}>
       <p>Ingredientes:</p>
       <ul>
         {recipe?.ingredients?.map((item) => {
           return (
-            <div key={item?.id}>
+            <div className="ingredient-row" key={item?.id}>
               <li>
-                {item.nombre} - {item.cantidad}
+                {item.nombre} {item.cantidad}
               </li>
             </div>
           );
         })}
       </ul>
+      Puntaje Nutricional: {recipe?.score}
+      </div>
+      <div className="ingredients-page-card-button" style={{display:"flex", justifyContent:"center", paddingTop:"10px"}}>
       <button onClick={onDelete}>Borrar Receta</button>
+      </div>
     </div>
   );
 };

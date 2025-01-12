@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
+import "./recipeHistory.css"
 
 
 const RecipeHistory = () => {
@@ -23,7 +24,12 @@ const RecipeHistory = () => {
   }; 
 
   return (
-    <div style={{ display: "flex", height: "600px", justifyContent: "center" }}>
+    <div style={{ display: "flex", flexDirection:"column", height:"100%"}}>
+      <div className="title-cards">
+        <h2>¡Estas son todas tus Recetas!</h2>
+        <p>Aquí podras encontrar diferentes tarjetas con todas tus recetas guardadas...</p>
+      </div>
+      <div className="my-cards">
       {recipes.length > 0 ? (recipes?.map((recipe, index) => {
         return (
           <div>
@@ -38,6 +44,7 @@ const RecipeHistory = () => {
             recipe={cardDefault}
             key="default"
           />)}
+    </div>
     </div>
   );
 };

@@ -1,0 +1,15 @@
+.ingredients-page-card-button button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Poppins", serif;
+    font-size: 16px;
+    background-color: #FCC539;
+    color: white;
+    cursor: pointer;  
+}
+
+.ingredients-page-card-button button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
