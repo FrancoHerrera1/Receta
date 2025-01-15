@@ -6,11 +6,13 @@ import "./recipeHistory.css"
 const RecipeHistory = () => {
   const [recipes, setRecipes] = useState([]);
 
+//Se trae las recetas guardadas en el localStorage a Recipes  
   useEffect(() => {
     const existingRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
     setRecipes(existingRecipes);
   }, []);
 
+//Para borrar las recetas guardadas en el localStorage  
   const handleDeleteRecipe = (recipe) => {
     const newRecipes = recipes.filter((r) => r.name !== recipe.name);
     setRecipes(newRecipes);
@@ -33,6 +35,7 @@ const RecipeHistory = () => {
       {recipes.length > 0 ? (recipes?.map((recipe, index) => {
         return (
           <div>
+          {/*se renderiza el RecipeCard con la card de la receta guardada en el localStorage*/}  
             <RecipeCard
             key={index}
             recipe={recipe}

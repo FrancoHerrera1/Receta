@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ingredientList.css";
 
+//const para agregar ingredientes de la lista en localStorage a la receta
 export const IngredientList = ({ ingredientsList, addItems }) => {
   const [nuevaCantidad, setNuevaCantidad] = useState({});
 

@@ -8,6 +8,7 @@ import "./App.css";
 import logo from "./components/imagenes/PolloLogo.png";
 import RecipeHistory from "./components/recipeHistory/RecipeHistory";
 
+//Arreglo de ingredientes por defecto
 const baseIngredientsList = [
   { id: 1, nombre: "Aceites", cantidad: "", puntajeNutricial: 135 },
   { id: 2, nombre: "Huevos", cantidad: "", puntajeNutricial: 84 },
@@ -16,6 +17,7 @@ const baseIngredientsList = [
   { id: 5, nombre: "Verduras", cantidad: "", puntajeNutricial: 55 },
 ];
 
+//Se renderiza las diferentes secciones de la pag para navegar entre ellas sin React Router
 const App = () => {
   const [renderPage, setRenderPage] = useState("home");
   const [ingredientsList, setIngredientsList] = useState(baseIngredientsList);

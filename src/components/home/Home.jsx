@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 const Home = ({ navegateToCreateRecipe, baseIngredientsList }) => {
 
+  //Se guarda en el localStorage el baseIngredietsList
   useEffect(() => {
     localStorage.setItem("ingredients", JSON.stringify(baseIngredientsList));
   }, []);

@@ -4,6 +4,7 @@ import ImgIngredients1 from "../imagenes/Ingredientes2.jpg"
 import ImgChef from "../imagenes/Chef.jpg"
 
 
+//Agregar nuevos ingredientes a la lista
 const Ingredients = ({ ingredientsList, setIngredientsList }) => {
   const [newIngredient, setNewIngredient] = useState({
     nombre: "",
@@ -19,12 +20,14 @@ const Ingredients = ({ ingredientsList, setIngredientsList }) => {
     }));
   };
 
+  //Con el If se obliga al usuario darle un name al ingrediente para agregarlo
   const addIngredient = () => {
     if (!newIngredient.nombre.trim()) {
       alert("El nombre del ingrediente es obligatorio.");
       return;
     }
-
+   
+  //El nuevo ingrediente se agrega en la posición +1 del arreglo existente
     const newId = ingredientsList?.length + 1;
     const ingredientToAdd = {
       id: newId,
