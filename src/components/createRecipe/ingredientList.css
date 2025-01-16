@@ -57,3 +57,53 @@
 .add-button:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+
+/* Media Queries para tablets (ancho menor a 1000px) */
+@media (max-width: 1000px) {
+  .ingredients-list {
+    padding: 30px;
+    height: 400px; 
+  }
+
+  .ingredients-list input {
+    width: 200px; 
+  }
+
+  .add-button {
+    width: 50px !important; 
+    height: 40px !important;
+  }
+
+  .ingredients-basico {
+    font-size: 1.2rem; 
+  }
+}
+
+/* Media Queries para smartphones (ancho menor a 500px) */
+@media (max-width: 500px) {
+  .ingredients-list {
+    padding: 20px;
+    height: 300px; 
+  }
+
+  .ingredients-list input {
+    width: 150px; 
+    height: 35px; 
+  }
+
+  .ingredient-list-row {
+    flex-direction: column; 
+    gap: 10px;
+  }
+
+  .add-button {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .ingredients-basico {
+    font-size: 1rem; 
+    margin-top: 20px;
+  }
+}

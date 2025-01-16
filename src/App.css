@@ -12,3 +12,76 @@ nav {
   font-family: "Poppins", serif;
   background-color: #F2F8F4;
 }
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+.Logo {
+  width: 50px;
+  height: auto;
+}
+
+.NavBar {
+  display: flex;
+}
+
+.NavBar .Lista {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.NavBar .Lista li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.NavBar .Lista li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.NavBar .Lista li:hover a {
+  color: #FCC539;
+}
+
+/* Media Queries para tablets (ancho menor a 800px) */
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .NavBar .Lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .Logo {
+    width: 40px;
+  }
+}
+
+/* Media Queries para smartphones (ancho menor a 500px) */
+@media (max-width: 500px) {
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .NavBar .Lista {
+    gap: 0.5rem;
+  }
+
+  .NavBar .Lista li a {
+    font-size: 0.9rem;
+  }
+
+  .Logo {
+    width: 30px;
+  }
+}

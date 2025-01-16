@@ -52,3 +52,50 @@
     border-width: 1px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+
+/* Media Queries para tablets (ancho menor a 1000px) */
+@media (max-width: 1000px) {
+    .ingredients-page-container {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .ingredients-page-card {
+      width: 90%; 
+      padding: 30px;
+    }
+  
+    .ingredients-page-container img {
+      width: 350px;
+      height: 250px;
+      margin-top: 20px;
+    }
+  }
+  
+  /* Media Queries para smartphones (ancho menor a 500px) */
+  @media (max-width: 500px) {
+    .ingredients-page-card {
+      padding: 20px;
+    }
+  
+    .ingredients-page-container img {
+      width: 300px;
+      height: 200px;
+    }
+  
+    .ingredients-page-card button {
+      width: 100%; 
+      font-size: 16px;
+      height: 45px;
+    }
+  
+    .ingredients-page-card input {
+      width: 100%; 
+      margin-bottom: 10px;
+    }
+  
+    .ingredients-page-list {
+      font-size: 14px; 
+    }
+  }

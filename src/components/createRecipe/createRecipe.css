@@ -65,3 +65,47 @@ border: 1px solid #ccc;
 .shadow-button:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
+
+/* Media Queries para tablets (ancho menor a 800px) */
+@media (max-width: 800px) {
+  .Cuerpo-RecipeBu {
+      flex-direction: column;
+      padding: 0 20px;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .recipe-body-card {
+      width: 100%;
+  }
+
+  .Cuerpo-RecipeBu button {
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+  }
+}
+
+/* Media Queries para smartphones (ancho menor a 500px) */
+@media (max-width: 500px) {
+  .Cuerpo-RecipeBu {
+      padding: 10px;
+      text-align: center;
+  }
+
+  .recipe-body-card {
+      gap: 1.5rem;
+  }
+
+  .CreaTu {
+      font-size: 18px;
+      text-align: center;
+  }
+
+  .Cuerpo-RecipeBu button {
+      width: 120px;
+      height: 40px;
+      font-size: 14px;
+  }
+}

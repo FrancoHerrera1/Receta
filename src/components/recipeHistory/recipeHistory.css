@@ -13,3 +13,31 @@
     padding: 60px;
 }
 
+/* Media Queries para tablets (ancho menor a 1000px) */
+@media (max-width: 1000px) {
+    .title-cards {
+      padding-top: 30px;
+      gap: 1.5rem; 
+    }
+  
+    .my-cards {
+      padding: 40px;
+      gap: 15px; 
+    }
+  }
+  
+  /* Media Queries para smartphones (ancho menor a 500px) */
+  @media (max-width: 500px) {
+    .title-cards {
+      padding-top: 20px;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .my-cards {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 20px;
+      gap: 10px; 
+    }
+  }
